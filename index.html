@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Pass Application System</title>
+    
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 450px; margin: 30px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, button { width: 100%; padding: 8px; margin-top: 6px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007BFF; color: white; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Bus Pass Application Form</h2>
+
+        <!-- Form sends to server -->
+        <form id="passForm" action="/submit" method="POST">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Route</label>
+            <select name="route" required>
+                <option value="">Select Route</option>
+                <option>Ahmedabad – Gandhinagar</option>
+                <option>Ahmedabad – Vadodara</option>
+                <option>Ahmedabad – Surat</option>
+            </select>
+
+            <label>Pass Type</label>
+            <select name="passType" required>
+                <option value="">Select Type</option>
+                <option>Monthly</option>
+                <option>Quarterly</option>
+                <option>Yearly</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+</body>
+</html>
